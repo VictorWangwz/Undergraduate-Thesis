@@ -1,0 +1,70 @@
+function out=dynamicwholemodel(in)
+p=in(1);
+q=in(2);
+r=in(3);
+roll=in(4);
+pitch=in(5);
+yaw=in(6);
+V=in(7);
+alpha=in(8);
+beta=in(9);
+w1=in(10);
+w2=in(11);
+w3=in(12);
+w4=in(13);
+%－－－－扰动量－－－－％
+%--------参数－－－－－%
+Ixx=0.006228;
+Iyy=0.006225;
+Izz=0.01121;
+Jr=0.0006;
+Ct=0.000313;
+Cq=0.000075;
+m=0.52;
+g=9.8;
+d=0.232;
+Cx=1.32;
+Cy=1.32;
+Cz=1.32;
+A=0.07065;
+roh=1.293;
+%------力矩等计算－－－
+om=w1-w2+w3-w4;
+
+T=Ct*(w1*w1+w2*w2+w3*w3+w4*w4);
+u2=w2*w2-w4*w4;
+u3=-w1*w1+w3*w3;
+u4=w1*w1-w2*w2+w3*w3-w4*w4;
+%－－－角加速项－－－－
+accp=(Iyy-Izz)*q*r/Ixx+Jr*om*q/Ixx+u2*Ct*d;
+accq=(Izz-Ixx)*p*r/Iyy+Jr*om*p/Iyy+u3*Ct*d;
+accr=(Ixx-Iyy)*p*q/Izz+u4*Cq;
+% accp=(Iyy-Izz)*q*r/Ixx+Jr*om*q/Ixx+u1/Ixx+d1;
+% accq=(Izz-Ixx)*p*r/Iyy+Jr*om*p/Iyy+u2/Iyy+d2;
+% accr=(Ixx-Iyy)*p*q/Izz+u3/Izz+d3;
+%accz=-g+Ct*u1/m;
+%-----姿态角项----------
+
+dotroll=p+sin(roll)*tan(pitch)*q+r*cos(roll)*tan(pitch);
+dotpitch=cos(roll)*q-sin(roll)*r;
+dotyaw=q*sin(roll)/cos(pitch)+r*cos(roll)/cos(pitch);
+
+%---线速度项----------
+u31=T*(cos(roll)*sin(pitch)*cos(yaw)+sin(roll)*sin(yaw));
+u32=T*(cos(roll)*sin(pitch)*sin(yaw)-sin(roll)*cos(yaw));
+u33=T*cos(roll)*cos(pitch);
+ax =-0.5*A*Cx*roh*xd*abs(xd)/m+u31; % [N] 
+% Y forces
+ay =-0.5*A*Cy*roh*yd*abs(yd)/m+u32; % [N]
+az =-g-0.5*A*Cz*roh*abs(zd)*zd/m+u33;          % actuators action [N]
+
+out(1)=accp;
+out(2)=accq;
+out(3)=accr;
+out(4)=dotroll;
+out(5)=dotpitch;
+out(6)=dotyaw;
+out(7)=ax;
+out(8)=ay;
+out(9)=az;
+

@@ -1,0 +1,12 @@
+﻿  camshift+kalman.cpp
+d:\opencv\xin\opencv\build\include\opencv2\flann\logger.h(66): error C2660: “fopen_s”: 函数不接受 2 个参数
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(49): warning C4838: 从“int”转换到“float”需要收缩转换
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(49): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(56): warning C4838: 从“int”转换到“float”需要收缩转换
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(56): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(247): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(248): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(249): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(250): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+c:\users\wangzhen\desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\camshift+kalman\camshift+kalman.cpp(260): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明

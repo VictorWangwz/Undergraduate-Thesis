@@ -1,0 +1,18 @@
+﻿  camshift+kalman.cpp
+camshift+kalman.cpp(52): warning C4838: 从“int”转换到“float”需要收缩转换
+camshift+kalman.cpp(52): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+camshift+kalman.cpp(59): warning C4838: 从“int”转换到“float”需要收缩转换
+camshift+kalman.cpp(59): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+camshift+kalman.cpp(278): warning C4244: “=”: 从“time_t”转换到“int”，可能丢失数据
+camshift+kalman.cpp(279): warning C4244: “=”: 从“time_t”转换到“int”，可能丢失数据
+camshift+kalman.cpp(283): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+camshift+kalman.cpp(284): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+camshift+kalman.cpp(285): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+camshift+kalman.cpp(286): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+  正在生成代码
+  1 of 30 functions ( 3.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  camshift+kalman.vcxproj -> C:\Users\wangzhen\Desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\Release\camshift+kalman.exe
+  camshift+kalman.vcxproj -> C:\Users\wangzhen\Desktop\毕业设计\我的工作\目标识别\example2\camshift+kalman\Release\camshift+kalman.pdb (Full PDB)
